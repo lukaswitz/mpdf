@@ -30645,7 +30645,7 @@ class mPDF
 				$size *= $maxsize * 2;
 			}
 		} else
-			$size *= (25.4 / $this->dpi); //nothing == px
+			$size = (float) $size * (25.4 / (float)$this->dpi); //nothing == px
 
 		return $size;
 	}
